@@ -1,94 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="IntoToAPCDApp">
 
 <head>
 
-<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<!-- Bootstrap -->	
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- AngularJS -->
+	<script src="js/angular.min.js"></script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The AngularJS code I wrote to run the page -->
+	<script src="js/controllers.js" ></script>
+	
 </head>
 
 
 
-<body>
-<div class="container">
-<h1>Introduction to the APCD for Healthcare Researchers</h1>
-<p>This website is a work in progress, with a target completion data of May, 2016.</p>
-<br>
-<p>The goal of this website is to create a resource that helps healthcare researchers understand the data availible in the All-Payer Claims Database (APCD).</p>
+<body ng-controller="MyCtrl as panel">
+<div class="container-fluid">
 
-
-
-<h3> Project Information</h3>
-<ul>
-	<li><a href="https://github.com/Intro-to-APCD/Intro-to-APCD.github.io/blob/master/ProjectManagment/ProjectProposal.pdf" target="_blank">Project Proposal</a></li>
-</ul>
-
-
-
-<h3> Introduction Video</h3>
-<br>
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UQhPyEi2uvg" frameborder="0" allowfullscreen></iframe>
-
-
-<br>
-<br>
-
-
-
-<h3> More Information</h3>
-<ul>
-	<li><a href="www.apcdcouncil.org">The APCD Council</a></li>
-	<li><a href="http://www.chiamass.gov/ma-apcd/">The Massachusetts APCD</a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-
-</ul>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
 
 
 
-<p>This site was created by Spyridon Ganas as part Georgia Tech's <a href="http://www.omscs.gatech.edu/cs-6460-educational-technology/">Educational Technology</a> course.
-<br> This course is part of the <a href="http://www.omscs.gatech.edu/">Online Master of Science in Computer Science</a> program.</p>
-<p> This site is not sponsored by the APCD Council, The Center for Health Information and Analysis (CHIA), or any other state agency.</p>
 
 
 
 
+	<nav class="navbar navbar-default navbar-fixed-top">
+
+
+		<!-- Set up the navigation bar -->
+		<ul class="nav nav-pills">
+			<li ng-class="{ active:panel.isSelected(1)}">
+				  <a href ng-click="panel.selectTab(1)">Home</a>
+			</li>				
+		
+		
+			<li ng-class="{ active:panel.isSelected(2)}">
+				  <a href ng-click="panel.selectTab(2)">Overview</a>
+			</li>
+
+			<li ng-class="{ active:panel.isSelected(3)}">
+				  <a href ng-click="panel.selectTab(3)">APCD Terminology</a>
+			</li>
+
+			<li ng-class="{ active:panel.isSelected(4)}">
+				  <a href ng-click="panel.selectTab(4)">Advanced Topics</a>
+			</li>
+
+			<li ng-class="{ active:panel.isSelected(5)}">
+				  <a href ng-click="panel.selectTab(5)">Past Research</a>
+			</li>
+
+			<li ng-class="{ active:panel.isSelected(6)}">
+				  <a href ng-click="panel.selectTab(6)">Data Dictionary</a>
+			</li>
+
+			<li ng-class="{ active:panel.isSelected(7)}">
+				  <a href ng-click="panel.selectTab(7)">References</a>
+			</li>
+		</ul>
+
+
+	</nav>
+
+
+
+	<section>
+
+
+		<!-- Home Page featuring the introduction video  -->			  
+		<div class="panel" ng-show="panel.isSelected(1)">
+		
+			<h2>An Introduction to the APCD for Healthcare Researchers</h2>
+			<br>
+			<p>This website is a work in progress, with a target completion data of May, 2016.</p>
+			<br>
+			<p>The goal of this website is to create a resource that helps healthcare researchers understand the data available in the All-Payer Claims Database (APCD).</p>
+
+			<h3> Project Information</h3>
+			<ul>
+				<li><a href="https://github.com/Intro-to-APCD/Intro-to-APCD.github.io/blob/master/ProjectManagment/ProjectProposal.pdf" target="_blank">Project Proposal</a></li>
+			</ul>
+
+
+			<h3> Introduction Video</h3>
+			<br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/UQhPyEi2uvg" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+		</div>	 
+
+		
+		
+		<!-- Overview videos  -->			  
+		<div class="panel" ng-show="panel.isSelected(2)">
+			<br>
+			<p>This panel will hold the overview videos</p>
+			<br>
+			
+			<p>Videos currently in development:</p>
+			<br>
+			<ul>
+				<li>The History of the Massachusetts APCD</li>
+				<li>Member Eligibility overview</li>
+				<li>Medical Claims overview</li>
+				<li>Pharmacy claims overview</li>
+				<li>Dental Claims overview</li>
+				<li>Product overview</li>
+				<li>Provider overview</li>
+				<li>ACA Risk Adjustment and the APCD</li>
+				<li>How does the APCD protect PHI? </li>
+				<li>What is the GIC and how do they use APCD data?</li>
+			</ul>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>	 		
+		
+		
+		<!-- APCD Terminology videos  -->			  
+		<div class="panel" ng-show="panel.isSelected(3)">
+			<br>
+			<p>This panel will hold the APCD Terminology videos</p>
+			<br>
+			<p>Videos currently in development:</p>
+			<br>
+			<ul>
+				<li>What is a Member Month?</li>
+				<li>What is a provider?</li>
+				<li>What is the difference between fully insures and self-insured?</li>
+				<li>What are the different types of insurance (ME003) </li>
+				<li>What is the difference between primary and secondary insurance?</li>
+				<li>What are the different types of coverage (ME029)</li>
+				<li>What are the different insurance lines of business?</li>
+				<li>What are the different types of Medicare (ME081)</li>
+				<li>What are deductibles, co-pays, coinsurance, etc.</li>
+				<li>What is the difference between a claim and a claim line?</li>
+				<li>What do all the different dollar amounts on a claim mean?</li>
+			</ul>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>	
+
+
+
+		<!-- Advanced Topics videos  -->			  
+		<div class="panel" ng-show="panel.isSelected(4)">
+			<br>
+			<p>This panel will hold the Advanced Topics videos</p>
+			<br>
+			<p>Videos currently in development:</p>
+			<br>
+			<ul>
+				<li>How can you link data in different APCD tables?</li>
+				<li>What are diagnosis codes, E-codes, ICD9 , ICD10 and ICD-CM  codes?</li>
+				<li>What are procedure codes and revenue codes?  What are procedure modifiers?</li>
+				<li>What is an actuarial values and metal level?</li>
+				<li>How are inpatient admissions recording in the APCD?  What are the different MC020 values and what do they mean?</li>
+				<li>What is a discharge status (MC023)</li>
+				<li>What is a DRG and other claim groupers?</li>
+				<li>What is a capitated claim and how is it handled in the APCD?</li>
+				<li>How are re-adjudicated and backed-out claims handled?</li>
+				<li>What is a condition code? (MC179)</li>
+				<li>What are the different types of medical facilities?</li>
+				<li>What are the different ways of identifying providers and their HCOs?</li>
+			</ul>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>	
+
+
+		<!-- Past Research videos  -->			  
+		<div class="panel" ng-show="panel.isSelected(5)">
+			<br>
+			<p>This panel will hold the Past Research videos</p>
+			<br>
+			<p>Videos currently in development:</p>
+			<br>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>	
+
+
+
+
+
+		<!-- Data Dictionary   -->			  
+		<div class="panel" ng-show="panel.isSelected(6)">
+			<br>
+			<p>A data dictionary is not currently available.</p>
+			<p>However, information about the data elements available in the APCD is available in the submission guidelines: &nbsp;&nbsp;<a href="http://www.chiamass.gov/apcd-data-submission-guides/" target="_blank">Massachusetts APCD Submission Guidelines</a></p>
+		</div>	
+
+
+		<!-- References  -->			  
+		<div class="panel" ng-show="panel.isSelected(7)">
+			<br>
+			<p>For more information, please visit these websites:</p>
+			<br>
+			<ul>
+				<li><a href="www.apcdcouncil.org">The APCD Council</a></li>
+				<li><a href="http://www.apcdshowcase.org/">The APCD Showcase</a></li>				
+				<li><a href="http://www.chiamass.gov/ma-apcd/">The Massachusetts APCD</a></li>				
+				<li><a href="http://www.chiamass.gov/non-government-agency-apcd-requests">Details on requesting Massachusetts APCD data</a></li>
+				<li><a href="http://www.chiamass.gov/archived-ma-apcd-data-applications/">A complete list of past research based on the Massachusetts APCD</a></li>			
+				<li><a href="http://www.rwjf.org/en/library/research/2014/01/realizing-the-potential-of-all-payer-claims-databases--creating-.html">The Robert Wood Johnson Foundation</a></li>
+				<li><a href="http://www.civhc.org/All-Payer-Claims-Database.aspx/">The Colorado APCD</a></li>
+			</ul>	
+		</div>	
+
+
+	</section>
 <br>
 <br>
 <br>
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
-<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Intro to APCD</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<footer>
+		<p>This site was created by Spyridon Ganas as part of Georgia Tech's <a href="http://www.omscs.gatech.edu/cs-6460-educational-technology/">Educational Technology</a> course.
+		<p> This site is not sponsored by the APCD Council, The Center for Health Information and Analysis (CHIA), or any other organization.</p>
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+		<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+		<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><i>An Introduction to the APCD for Healthcare Researchers</i></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+		<br>
+	</footer>
 
 </div>
 </body>
