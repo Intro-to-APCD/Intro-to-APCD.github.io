@@ -45,11 +45,11 @@
 			</li>
 
 			<li ng-class="{ active:panel.isSelected(3)}">
-				  <a href ng-click="panel.selectTab(3)">APCD Terminology</a>
+				  <a href ng-click="panel.selectTab(3)">Health Insurance Terminology</a>
 			</li>
 
 			<li ng-class="{ active:panel.isSelected(4)}">
-				  <a href ng-click="panel.selectTab(4)">Advanced Topics</a>
+				  <a href ng-click="panel.selectTab(4)">Medical Claims Terminology</a>
 			</li>
 
 			<li ng-class="{ active:panel.isSelected(5)}">
@@ -102,13 +102,12 @@
 			<p>Videos currently in development:</p>
 			<br>
 			<ul>
-				<li>The History of the Massachusetts APCD</li>
-				<li>Member Eligibility overview</li>
 				<li>Medical Claims overview</li>
-				<li>Pharmacy claims overview</li>
-				<li>Dental Claims overview</li>
+				<li>Pharmacy claims overview</li>			
+				<li>Member Eligibility overview</li>
 				<li>Product overview</li>
 				<li>Provider overview</li>
+				<li>The History of the Massachusetts APCD</li>
 				<li>Protected Health Information and APCD Security</li>
 				<li>Administrative Simplification</li>
 			</ul>
@@ -120,10 +119,10 @@
 		</div>
 		
 		
-		<!-- APCD Terminology videos  -->
+		<!-- Health Insurance Terminology videos  -->
 		<div class="panel" ng-show="panel.isSelected(3)">
 			<br>
-			<p>This webpage will hold the APCD Terminology videos.</p>
+			<p>This webpage will hold the Health Insurance Terminology videos.</p>
 			<br>
 			<p>Videos currently in development:</p>
 			<br>
@@ -135,9 +134,8 @@
 				<li>What are the different types of coverage (ME029)</li>
 				<li>What are the different insurance lines of business?</li>
 				<li>What are the different types of Medicare (ME081)</li>
-				<li>What are deductibles, co-pays, coinsurance, etc.</li>
-				<li>What is the difference between a claim and a claim line?</li>
-				<li>What do all the different dollar amounts on a claim mean?</li>
+				<li>What is an actuarial values and metal level?</li>
+				<li>How can you link data in different APCD tables?</li>
 			</ul>
 			<br>
 			<br>
@@ -148,18 +146,19 @@
 
 
 
-		<!-- Advanced Topics videos  -->
+		<!-- Medical Claims Terminology videos  -->
 		<div class="panel" ng-show="panel.isSelected(4)">
 			<br>
-			<p>This webpage will hold the Advanced Topics videos.</p>
+			<p>This webpage will hold Medical Claims Terminology videos.</p>
 			<br>
 			<p>Videos currently in development:</p>
 			<br>
 			<ul>
-				<li>How can you link data in different APCD tables?</li>
+				<li>What are deductibles, co-pays, coinsurance, etc.</li>
+				<li>What is the difference between a claim and a claim line?</li>
+				<li>What do all the different dollar amounts on a claim mean?</li>				
 				<li>What are diagnosis codes, E-codes, ICD9 , ICD10 and ICD-CM  codes?</li>
 				<li>What are procedure codes and revenue codes?  What are procedure modifiers?</li>
-				<li>What is an actuarial values and metal level?</li>
 				<li>How are inpatient admissions recording in the APCD?  What are the different MC020 values and what do they mean?</li>
 				<li>What is a discharge status (MC023)</li>
 				<li>What is a DRG and other claim groupers?</li>
