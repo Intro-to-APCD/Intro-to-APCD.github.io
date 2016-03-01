@@ -13,3 +13,4 @@
 7.  merged discharge status slides into the inpatient admission powerpoint
 8.  merged self/fully insured, primary/secondary, lines of business and  types of coverage slides into the different types of insurance presentation
 9.  Added two presentations to introduce Medicare and Medicaid
+10.  added a tab to store YouTube videos I found interesting

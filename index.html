@@ -59,6 +59,10 @@
 			<li ng-class="{ active:panel.isSelected(6)}">
 				  <a href ng-click="panel.selectTab(6)">Data Dictionary</a>
 			</li>
+			
+			<li ng-class="{ active:panel.isSelected(8)}">
+				  <a href ng-click="panel.selectTab(8)">Additional Resources</a>
+			</li>
 
 			<li ng-class="{ active:panel.isSelected(7)}">
 				  <a href ng-click="panel.selectTab(7)">References</a>
@@ -177,6 +181,52 @@
 
 
 
+		<!-- External Video Resources  -->
+		<div class="panel" ng-show="panel.isSelected(8)">
+			<br>
+
+			<h3>External Video Resources</h3>
+			<p>These videos were create by other organizations and are subject to the copyright restrictions shown on their YouTube page.<p>
+			<br>
+			<br>
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/lab3_vbq32M" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>			
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/L8sKEIGbDEY" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/vrI4QkdXmkY" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/FAaeCYyAxl0?list=PLmC_kcsTR3B_g6cSsy-fIooCyLUKggArt" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/ahEW1xEKz0Y" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/npc0PLcYyxM" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Yaa08nqyUh0" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/oxpp-LDwBGY" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/_ktUv0OHXAI" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>		
+		
+		
+		
+		
+		
 
 
 
@@ -197,12 +247,17 @@
 			
 
 			
+			<div ng-hide=true><!-- This section will contain interviews, if I can get any  -->
+				<h3>Interviews with APCD Researchers</h3>
+				<br>
+				<ul>
+					<li>Coming Soon!</li>
+				</ul>
+			</div>
 			
-			<h3>Interviews with APCD Researchers</h3>
-			<br>
-			<ul>
-				<li>Coming Soon!</li>
-			</ul>
+			
+			
+			
 			<br>
 			<br>
 			<br>
@@ -249,6 +304,8 @@
 				<li><a href="http://www.civhc.org/All-Payer-Claims-Database.aspx/" target="_blank">The Colorado APCD</a></li>
 				<li><a href="http://www.rwjf.org/en/library/research/2014/01/realizing-the-potential-of-all-payer-claims-databases--creating-.html" target="_blank">The Robert Wood Johnson Foundation</a></li>
 			</ul>	
+			<br>
+			<br>
 		</div>	
 	</section>
 	
