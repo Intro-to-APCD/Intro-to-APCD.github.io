@@ -15,4 +15,5 @@
 9.  Added two presentations to introduce Medicare and Medicaid
 10.  added a tab to store YouTube videos I found interesting
 11. Decided not to do the "Linking APCD Tables" video because it was too specific to the massachusetts APCD.
+12. I merged the medicare and medicaid powerpoints into a "federal healthcare" powerpoint
 
