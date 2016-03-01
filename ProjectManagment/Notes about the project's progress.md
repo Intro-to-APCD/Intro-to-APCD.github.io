@@ -14,3 +14,5 @@
 8.  merged self/fully insured, primary/secondary, lines of business and  types of coverage slides into the different types of insurance presentation
 9.  Added two presentations to introduce Medicare and Medicaid
 10.  added a tab to store YouTube videos I found interesting
+11. Decided not to do the "Linking APCD Tables" video because it was too specific to the massachusetts APCD.
+
