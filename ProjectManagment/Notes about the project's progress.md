@@ -19,3 +19,7 @@
 
 3/2/16
 13.  I determined that condition code is not relevent to most researchers, so I'm not going to create a video about it.
+
+
+3/3/16
+14.  I merged the three claim video topics into a single "How are Claims Paid?" powerpoint
