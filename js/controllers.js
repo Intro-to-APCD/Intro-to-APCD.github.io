@@ -15,6 +15,9 @@
 			this.selectTab = function(setTab){
 				this.tab=setTab;
 				
+				// scroll to the top of the page whenever the panel is changed
+				window.scrollTo(0,0);
+				
 			};
 
 			this.isSelected = function(checkTab) {
