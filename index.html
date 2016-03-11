@@ -15,6 +15,20 @@
 
 	<!-- The AngularJS code I wrote to run the page -->
 	<script src="js/controllers.js" ></script>
+
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+	
+	
+	
+	<!-- The Bootstrap JavaScript -->
+	<script src="js/bootstrap.min.js" ></script>
+
 	
 </head>
 
@@ -22,49 +36,59 @@
 
 <body ng-controller="MyCtrl as panel">
 
-
-
-	<nav class="navbar navbar-default navbar-fixed-top">
-
-
-		<!-- Set up the navigation bar -->
-		<ul class="nav nav-pills">
-			<li ng-class="{ active:panel.isSelected(1)}">
-				  <a href ng-click="panel.selectTab(1)">Home</a>
-			</li>				
+	<!-- Static navbar -->
+	<nav class="navbar navbar-default">
+        <div class="container-fluid">
 		
-		
-			<li ng-class="{ active:panel.isSelected(2)}">
-				  <a href ng-click="panel.selectTab(2)">Overview</a>
-			</li>
-            
-			<li ng-class="{ active:panel.isSelected(3)}">
-				  <a href ng-click="panel.selectTab(3)">Medical Claims Terminology</a>
-			</li>
+			<!-- The button that shows up on mobile phones -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+			</div>
+		  
+			<!-- The menu that shows up on larger screens -->
+			<div id="navbar" class="navbar-collapse collapse nav-pills navbar-fixed-top">
+				<ul class="nav nav-pills">
+					<li><a href ng-click="panel.selectTab(1)">Home</a></li>
+					<li><a href ng-click="panel.selectTab(2)">Overview</a></li>
+					<li><a href ng-click="panel.selectTab(3)">Medical Claims Terminology</a></li>
+					<li><a href ng-click="panel.selectTab(4)">Health Insurance Terminology</a></li>
+					<li><a href ng-click="panel.selectTab(5)">Past Research</a></li>
+					<li><a href ng-click="panel.selectTab(6)">Data Dictionary</a></li>
+					<li><a href ng-click="panel.selectTab(8)">Additional Resources</a></li>
+					<li><a href ng-click="panel.selectTab(7)">References</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		  
+		  
+        </div><!--/.container-fluid -->
+      </nav>
 
-			<li ng-class="{ active:panel.isSelected(4)}">
-				  <a href ng-click="panel.selectTab(4)">Health Insurance Terminology</a>
-			</li>
-
-			<li ng-class="{ active:panel.isSelected(5)}">
-				  <a href ng-click="panel.selectTab(5)">Past Research</a>
-			</li>
-
-			<li ng-class="{ active:panel.isSelected(6)}">
-				  <a href ng-click="panel.selectTab(6)">Data Dictionary</a>
-			</li>
-			
-			<li ng-class="{ active:panel.isSelected(8)}">
-				  <a href ng-click="panel.selectTab(8)">Additional Resources</a>
-			</li>
-
-			<li ng-class="{ active:panel.isSelected(7)}">
-				  <a href ng-click="panel.selectTab(7)">References</a>
-			</li>
-		</ul>
-
-
-	</nav>
+	
+	
+	
+	
+	
+	
+	<!-- 
+	
+		  
+			<li><a href ng-click="panel.selectTab(1)">Home</a></li>
+			<li><a href ng-click="panel.selectTab(2)">Overview</a></li>
+			<li><a href ng-click="panel.selectTab(3)">Medical Claims Terminology</a></li>
+			<li><a href ng-click="panel.selectTab(4)">Health Insurance Terminology</a>
+			<li><a href ng-click="panel.selectTab(5)">Past Research</a></li>
+			<li><a href ng-click="panel.selectTab(6)">Data Dictionary</a></li>
+			<li><a href ng-click="panel.selectTab(8)">Additional Resources</a></li>
+			<li><a href ng-click="panel.selectTab(7)">References</a></li>
+		  
+		  
+   -->
+ 
 
 
 
@@ -72,7 +96,26 @@
 
 
 
-<div class="container-fluid">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br>
 <br>
@@ -434,5 +477,15 @@ without this, they will hide the nave bar
 	</footer>
 
 </div>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
