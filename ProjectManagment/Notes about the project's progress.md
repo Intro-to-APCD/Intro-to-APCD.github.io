@@ -23,3 +23,8 @@
 
 3/3/16
 14.  I merged the three claim video topics into a single "How are Claims Paid?" powerpoint
+
+
+3/11/16
+15.  I finally got the website to be completly mobile friendly!
+
