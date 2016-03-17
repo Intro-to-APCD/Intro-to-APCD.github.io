@@ -1,0 +1,41 @@
+
+These are the current fields:
+
+
+    "ReleaseLevel":2,
+    "DataElementSource":"Derived-DC1",
+    "DataElementName":"Submission Month",
+    "CHIA_Notes":"Required by IT for internal linkage",
+    "NetezzaColumnName":"RIGHT([SUBMISSIONYEARMONTH],2) as \"SubmissionMonth\"",
+    "Other_NOTE":"",
+    "DataType":"int",
+    "DataLength":"2",
+    "FLAG_Carrier_Specific_TLKP":null,
+    "FieldType":"Derived",
+    "Hashed":"",
+    "Redaction":"",
+    "Description":"",
+    "ElementSubmissionGuideline":"",
+    "Condition":"NA",
+    "ThresholdPercent":"NA",
+    "Category":"NA"
+
+
+
+I need to add:
+1.  The submission guideline when the variable was first introduced.
+2.  The submission guideline when the variable was most recently changed/modified
+3.  Notes about the "Completeness" of the variable.  i.e. number of missing values, any carrier specific variances
+4.  A note to say if the field is PHI, PII, or if it becomes PHI/PII when combined with some other field(s).
+
+
+
+
+
+
+Dave Berube may be able to help me populate some of these data fields.
+
+
+
+
+"2016 Q2 Release" is going to be the next big release.  After that, the goal is to release new features every quarter.  So there will  be a total of 3 releases in 2016.

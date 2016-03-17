@@ -1,0 +1,11 @@
+/* Spiro Ganas 
+ * 11/18/15
+ *
+ */
+
+
+
+
+
+/*  body padding is required because the fixed header will overlap content */
+body { padding-top: 120px; }

@@ -1,0 +1,444 @@
+<!doctype html>
+<html ng-app="APCDDataDictionaryApp">
+<head>
+
+	<!-- AngularJS -->
+	<script src="js/angular.min.js"></script>
+
+	<!-- Files that store the data dictionaries as JSON files -->
+	<script src="js/DC_JSON.js"></script>
+	<script src="js/MC_JSON.js"></script>
+	<script src="js/ME_JSON.js"></script>
+	<script src="js/PC_JSON.js"></script>
+	<script src="js/PR_JSON.js"></script>
+	<script src="js/PV_JSON.js"></script>
+    <script src="js/ReleaseNotes_JSON.js"></script>
+	
+	<!-- The AngularJS code I wrote to run the page -->
+	<script src="js/controllers.js" ></script>
+	
+	<!-- Bootstrap -->	
+	<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+
+	<!-- My Custom CSS -->	
+	<link rel="stylesheet" href="css/DataDictionary.css">
+	
+	
+
+</head>
+<body ng-controller="DDCtrl as panel">
+<div class="container-fluid">
+	
+	<div class="row">
+		<div class="col-md-2">
+			<img src="images/chia_logo_108.png"/>
+		</div>
+		<div class="col-md-10">
+			<h1>APCD Data Dictionary</h1>
+		</div>
+	</div>	
+
+		
+
+<br>
+<br>
+	
+	
+	
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+
+  	<div class="row">
+		<div class="col-md-2">
+			<img src="images/chia_logo_108.png"/>
+		</div>
+		<div class="col-md-10">
+			<h1>APCD Data Dictionary</h1>
+		</div>
+	</div>	
+  
+  
+  
+
+
+		<!-- Set up the navigation bar -->
+			<ul class="nav nav-pills">
+
+				<li ng-class="{ active:panel.isSelected(1)}">
+					  <a href ng-click="panel.selectTab(1)">Release Notes</a>
+				</li>				
+			
+			
+				<li ng-class="{ active:panel.isSelected(2)}">
+					  <a href ng-click="panel.selectTab(2)">Dental Claims</a>
+				</li>
+
+				<li ng-class="{ active:panel.isSelected(3)}">
+					  <a href ng-click="panel.selectTab(3)">Medical Claims</a>
+				</li>
+
+				<li ng-class="{ active:panel.isSelected(4)}">
+					  <a href ng-click="panel.selectTab(4)">Member Eligibility</a>
+				</li>
+
+				<li ng-class="{ active:panel.isSelected(5)}">
+					  <a href ng-click="panel.selectTab(5)">Pharmacy Claims</a>
+				</li>
+
+				<li ng-class="{ active:panel.isSelected(6)}">
+					  <a href ng-click="panel.selectTab(6)">Products</a>
+				</li>
+
+				<li ng-class="{ active:panel.isSelected(7)}">
+					  <a href ng-click="panel.selectTab(7)">Providers</a>
+				</li>
+	
+
+
+		  </ul>
+<br>
+
+
+<!-- Use this form to let the user show/hide fields -->
+<form>
+<label>Show Details:&nbsp;&nbsp;</label>
+	<input type="checkbox"  name="DataElementCheckbox" ng-model="DataElementCheckbox"   checked>Data Element&nbsp;&nbsp;</input>
+	<input type="checkbox"  name="NetezzaColumnName" ng-model="NetezzaColumnName"   checked>Netezza Column Name&nbsp;&nbsp;</input>
+	<input type="checkbox"  name="ReleaseLevel" ng-model="ReleaseLevel"   checked>Release Level&nbsp;&nbsp;</input>
+	<input type="checkbox"  name="Notes" ng-model="Notes"  checked>Notes&nbsp;&nbsp;</input>
+	<input type="checkbox"  name="Description" ng-model="Description"  checked>Description&nbsp;&nbsp;</input>	
+	<input type="checkbox"  name="ElementSubmissionGuideline" ng-model="ElementSubmissionGuideline"  checked>Element Submission Guideline&nbsp;&nbsp;</input>	
+	<input type="checkbox"  name="Condition" ng-model="Condition"  checked>Condition&nbsp;&nbsp;</input>	
+	<input type="checkbox"  name="ThresholdPercent" ng-model="ThresholdPercent"  checked>Threshold Percent&nbsp;&nbsp;</input>	
+	<input type="checkbox"  name="Category" ng-model="Category"  checked>Category&nbsp;&nbsp;</input>	
+		
+	
+</form>
+
+
+
+
+<br>
+<br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+</nav>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+<section >
+
+
+
+
+
+	<!-- Notes  -->			  
+	<div class="panel" ng-show="panel.isSelected(1)">
+	
+		<div class="row">	
+			<div class="col-md-12">
+				<br>
+				<br>
+				<p> <b>Work-in-Progress!</b></p>
+				<p> For questions or comments, please contact:</p>
+				<p>Spiro Ganas </p>
+				<p><a href="mailto:Spiro.Ganas@MassMail.State.MA.US">Spiro.Ganas@MassMail.State.MA.US</a> </p>
+				<br>
+			</div>
+		</div>	
+		
+		
+		<ul>
+			<li ng-repeat="RN in RN_Data">
+			  <span><b>{{RN.ReleaseNoteName}} </b> </span>
+					<ul>
+						<li >Date: {{RN.ReleaseNoteDate}}</li>
+						<li >Release Note: {{RN.ReleaseNoteText}}</li>
+					</ul>
+			</li>
+		</ul>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Dental Claims -->
+		<div class="panel" ng-show="panel.isSelected(2)">
+		  <ul>
+			<li ng-repeat="DC in DC_Data">
+			  <span><b>{{DC.DataElementName}} </b> </span>
+					<ul>
+						<li ng-show="!DataElementCheckbox" ng-hide="!DataElementCheckbox">Data Element: {{DC.DataElementSource}}</li>
+						<li ng-show="!NetezzaColumnName" ng-hide="!NetezzaColumnName">Netezza Column Name: {{DC.NetezzaColumnName}}</li>
+						<li ng-show="!ReleaseLevel" ng-hide="!ReleaseLevel">Release Level: {{DC.ReleaseLevel}}</li>
+						<li ng-show="!Notes" ng-hide="!Notes">Notes: {{DC.CHIA_Notes}}</li>
+						<li ng-show="!Description" ng-hide="!Description">Description: {{DC.Description}}</li>
+						<li ng-show="!ElementSubmissionGuideline" ng-hide="!ElementSubmissionGuideline">Element Submission Guideline: {{DC.ElementSubmissionGuideline}}</li>
+						<li ng-show="!Condition" ng-hide="!Condition">Condition: {{DC.Condition}}</li>
+						<li ng-show="!ThresholdPercent" ng-hide="!ThresholdPercent">Threshold Percent: {{DC.ThresholdPercent}}</li>
+						<li ng-show="!Category" ng-hide="!Category">Category: {{DC.Category}}</li>
+					
+					
+					
+					
+					</ul>
+			</li>
+		  </ul>
+		</div>
+	  
+	  
+
+
+	<!-- Medical Claims -->
+		<div class="panel" ng-show="panel.isSelected(3)">
+		  <ul>
+			<li ng-repeat="MC in MC_Data">
+			  <span><b>{{MC.DataElementName}} </b> </span>
+					<ul>
+					<li ng-show="!DataElementCheckbox" ng-hide="!DataElementCheckbox">Data Element: {{MC.DataElementSource}}</li>
+					<li ng-show="!NetezzaColumnName" ng-hide="!NetezzaColumnName">Netezza Column Name: {{MC.NetezzaColumnName}}</li>
+					<li ng-show="!ReleaseLevel" ng-hide="!ReleaseLevel">Release Level: {{MC.ReleaseLevel}}</li>
+					<li ng-show="!Notes" ng-hide="!Notes">Notes: {{MC.CHIA_Notes}}</li>
+					<li ng-show="!Description" ng-hide="!Description">Description: {{MC.Description}}</li>
+					<li ng-show="!ElementSubmissionGuideline" ng-hide="!ElementSubmissionGuideline">Element Submission Guideline: {{MC.ElementSubmissionGuideline}}</li>
+					<li ng-show="!Condition" ng-hide="!Condition">Condition: {{MC.Condition}}</li>
+					<li ng-show="!ThresholdPercent" ng-hide="!ThresholdPercent">Threshold Percent: {{MC.ThresholdPercent}}</li>
+					<li ng-show="!Category" ng-hide="!Category">Category: {{MC.Category}}</li>
+					</ul>
+			</li>
+		  </ul>
+		</div>	  
+		  
+		  
+		  
+	<!-- Member Eligibility -->	  
+		<div class="panel" ng-show="panel.isSelected(4)">
+		  <ul>
+			<li ng-repeat="ME in ME_Data">
+			  <span><b>{{ME.DataElementName}} </b> </span>
+					<ul>
+					<li ng-show="!DataElementCheckbox" ng-hide="!DataElementCheckbox">Data Element: {{ME.DataElementSource}}</li>
+					<li ng-show="!NetezzaColumnName" ng-hide="!NetezzaColumnName">Netezza Column Name: {{ME.NetezzaColumnName}}</li>
+					<li ng-show="!ReleaseLevel" ng-hide="!ReleaseLevel">Release Level: {{ME.ReleaseLevel}}</li>
+					<li ng-show="!Notes" ng-hide="!Notes">Notes: {{ME.CHIA_Notes}}</li>
+					<li ng-show="!Description" ng-hide="!Description">Description: {{ME.Description}}</li>
+					<li ng-show="!ElementSubmissionGuideline" ng-hide="!ElementSubmissionGuideline">Element Submission Guideline: {{ME.ElementSubmissionGuideline}}</li>
+					<li ng-show="!Condition" ng-hide="!Condition">Condition: {{ME.Condition}}</li>
+					<li ng-show="!ThresholdPercent" ng-hide="!ThresholdPercent">Threshold Percent: {{ME.ThresholdPercent}}</li>
+					<li ng-show="!Category" ng-hide="!Category">Category: {{ME.Category}}</li>
+					</ul>
+			</li>
+		  </ul>
+		</div>	  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+	<!-- Pharmacy Claims -->	  
+		<div class="panel" ng-show="panel.isSelected(5)">
+		  <ul>
+			<li ng-repeat="PC in PC_Data">
+			  <span><b>{{PC.DataElementName}} </b> </span>
+					<ul>
+					<li ng-show="!DataElementCheckbox" ng-hide="!DataElementCheckbox">Data Element: {{PC.DataElementSource}}</li>
+					<li ng-show="!NetezzaColumnName" ng-hide="!NetezzaColumnName">Netezza Column Name: {{PC.NetezzaColumnName}}</li>
+					<li ng-show="!ReleaseLevel" ng-hide="!ReleaseLevel">Release Level: {{PC.ReleaseLevel}}</li>
+					<li ng-show="!Notes" ng-hide="!Notes">Notes: {{PC.CHIA_Notes}}</li>
+					<li ng-show="!Description" ng-hide="!Description">Description: {{PC.Description}}</li>
+					<li ng-show="!ElementSubmissionGuideline" ng-hide="!ElementSubmissionGuideline">Element Submission Guideline: {{PC.ElementSubmissionGuideline}}</li>
+					<li ng-show="!Condition" ng-hide="!Condition">Condition: {{PC.Condition}}</li>
+					<li ng-show="!ThresholdPercent" ng-hide="!ThresholdPercent">Threshold Percent: {{PC.ThresholdPercent}}</li>
+					<li ng-show="!Category" ng-hide="!Category">Category: {{PC.Category}}</li>
+					</ul>
+			</li>
+		  </ul>
+		</div>	  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+	<!-- Products -->			  
+		 <div class="panel" ng-show="panel.isSelected(6)">
+		  <ul>
+			<li ng-repeat="PR in PR_Data">
+			  <span><b>{{PR.DataElementName}} </b> </span>
+					<ul>
+					<li ng-show="!DataElementCheckbox" ng-hide="!DataElementCheckbox">Data Element: {{PR.DataElementSource}}</li>
+					<li ng-show="!NetezzaColumnName" ng-hide="!NetezzaColumnName">Netezza Column Name: {{PR.NetezzaColumnName}}</li>
+					<li ng-show="!ReleaseLevel" ng-hide="!ReleaseLevel">Release Level: {{PR.ReleaseLevel}}</li>
+
+					<li ng-show="!Notes" ng-hide="!Notes">Notes: {{PR.CHIA_Notes}}</li>
+					<li ng-show="!Description" ng-hide="!Description">Description: {{PR.Description}}</li>
+					<li ng-show="!ElementSubmissionGuideline" ng-hide="!ElementSubmissionGuideline">Element Submission Guideline: {{PR.ElementSubmissionGuideline}}</li>
+					<li ng-show="!Condition" ng-hide="!Condition">Condition: {{PR.Condition}}</li>
+					<li ng-show="!ThresholdPercent" ng-hide="!ThresholdPercent">Threshold Percent: {{PR.ThresholdPercent}}</li>
+					<li ng-show="!Category" ng-hide="!Category">Category: {{PR.Category}}</li>
+					</ul>
+			</li>
+		  </ul>
+		</div>	  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+	<!-- Providers -->			  
+		 <div class="panel" ng-show="panel.isSelected(7)">
+		  <ul>
+			<li ng-repeat="PV in PV_Data">
+			  <span><b>{{PV.DataElementName}} </b> </span>
+					<ul>
+					<li ng-show="!DataElementCheckbox" ng-hide="!DataElementCheckbox">Data Element: {{PV.DataElementSource}}</li>
+					<li ng-show="!NetezzaColumnName" ng-hide="!NetezzaColumnName">Netezza Column Name: {{PV.NetezzaColumnName}}</li>
+					<li ng-show="!ReleaseLevel" ng-hide="!ReleaseLevel">Release Level: {{PV.ReleaseLevel}}</li>
+
+					<li ng-show="!Notes" ng-hide="!Notes">Notes: {{PV.CHIA_Notes}}</li>
+					<li ng-show="!Description" ng-hide="!Description">Description: {{PV.Description}}</li>
+					<li ng-show="!ElementSubmissionGuideline" ng-hide="!ElementSubmissionGuideline">Element Submission Guideline: {{PV.ElementSubmissionGuideline}}</li>
+					<li ng-show="!Condition" ng-hide="!Condition">Condition: {{PV.Condition}}</li>
+					<li ng-show="!ThresholdPercent" ng-hide="!ThresholdPercent">Threshold Percent: {{PV.ThresholdPercent}}</li>
+					<li ng-show="!Category" ng-hide="!Category">Category: {{PV.Category}}</li>
+					</ul>
+			</li>
+		  </ul>
+		 </div>	  
+	
+
+		 
+		 
+		 
+		 </div>	 
+
+
+	
+	 
+
+
+</section>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+</div>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
