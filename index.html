@@ -39,7 +39,10 @@
 		
 			<!-- The button that shows up on mobile phones -->
 			<div class="navbar-header">
-			<a class="navbar-brand" href="#">APCD for Researchers</a>
+			<a class="navbar-brand" href ng-click="panel.selectTab(1)">APCD for Researchers</a>
+			
+
+			
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 				  <span class="sr-only">Toggle navigation</span>
 				  <span class="icon-bar"></span>
@@ -51,7 +54,7 @@
 			<!-- The menu that shows up on larger screens -->
 			<div id="navbar" class="collapse navbar-collapse ">
 				<ul class="nav nav-pills">
-					<li><a href ng-click="panel.selectTab(1)" >Home</a></li>
+					
 					<li><a href ng-click="panel.selectTab(2)" >Overview</a></li>
 					<li><a href ng-click="panel.selectTab(3)" >Medical Claims Terminology</a></li>
 					<li><a href ng-click="panel.selectTab(4)" >Health Insurance Terminology</a></li>
@@ -87,15 +90,16 @@ without this, they will hide the nave bar
 		<!-- Home Page featuring the introduction video  -->
 		<div class="panel" ng-show="panel.isSelected(1)">
 		
-			<!-- Work-in-progress note - will be deleted once the website is complete  -->
+			<!-- Work-in-progress note - will be deleted once the website is complete 
 			<p>This website is a <b>work-in-progress</b>, with an expected completion date of May 1st, 2016.
 			For more information, please see the <a href="https://github.com/Intro-to-APCD/Intro-to-APCD.github.io/blob/master/ProjectManagment/ProjectProposal.pdf" target="_blank">Project Proposal</a>.
 			</p>
-			<br>
+			<br> 
+			-->
 			<!-- End Work-in-progress note -->
 
 			<h1>An Introduction to the APCD for Healthcare Researchers</h1>
-			<br>
+			
             
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/UQhPyEi2uvg?wmode=transparent" frameborder="0" allowfullscreen></iframe>
 			
@@ -108,11 +112,9 @@ without this, they will hide the nave bar
 		<!-- Overview videos  -->
 		<div class="panel" ng-show="panel.isSelected(2)">
 			<h1>An Overview of the All-Payer Claims Database</h1>
-			<br>
-			
 
-			<br>
-			<br>
+
+	
 			<br>
 			<h3>Medical Claims Overview</h3>    
             <iframe width="560" height="315" src="https://www.youtube.com/embed/CQnoOmF8o1s?wmode=transparent" frameborder="0" allowfullscreen></iframe>
@@ -175,7 +177,7 @@ without this, they will hide the nave bar
 		<div class="panel" ng-show="panel.isSelected(3)">
 			<h1>Medical Claims Terminology</h1>
 
-			<br>
+
 			<br>
 			<br>
 			<h3>How are Claims Paid?</h3>  
@@ -239,8 +241,6 @@ without this, they will hide the nave bar
 		<div class="panel" ng-show="panel.isSelected(4)">
 			<h1>Health Insurance Terminology</h1>
 
-			
-			<br>
 			<br>
 			<br>
 			<h3>Types of Commercial Health Insurance</h3>   		
@@ -353,14 +353,14 @@ without this, they will hide the nave bar
 			
 
 			
-
+			<!-- 
 				<h1>Interviews with APCD Researchers</h1>
 				<br>
 				<ul>
 					<li>Coming Soon!</li>
 				</ul>
 
-			
+			-->
 			
 			
 			
