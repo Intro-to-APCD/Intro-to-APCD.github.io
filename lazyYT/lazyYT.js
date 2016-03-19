@@ -90,6 +90,11 @@
           thumb_img = 'default.jpg';
         }
         
+        
+        
+        // Spiro's Code to always use the right video thumbnail
+        thumb_img = '0.jpg';
+        
         $thumb = $el.find('.ytp-thumbnail').css({
             'background-image': ['url(//img.youtube.com/vi/', id, '/', thumb_img, ')'].join('')
         })
