@@ -457,33 +457,6 @@ without this, they will hide the nave bar
     </script>
 
 
-    <!-- This script prevents multiple YouTubes from playing at the same time.  http://stackoverflow.com/questions/12994459/how-to-stop-embedded-youtube-videos-from-playing-simultaneously -->
-    <script>
-        var playerCurrentlyPlaying = null;
-        function chain(){       
-            $('.post').each(function(){
-                var player_id = $(this).attr("data-youtube-id");
-                player = new YT.Player( player_id, { 
-                    events:
-                        {      
-                        'onStateChange': function (event) 
-                            {
-
-                            if (event.data == YT.PlayerState.PLAYING) 
-                                { 
-                                  if(playerCurrentlyPlaying != null && 
-                                  playerCurrentlyPlaying != player_id)
-                                  callPlayer( playerCurrentlyPlaying , 'pauseVideo' );
-                                  playerCurrentlyPlaying = player_id;
-
-                                }            
-
-                            }
-                        }        
-                });
-            });
-        }           
-    </script>
 
 
 
