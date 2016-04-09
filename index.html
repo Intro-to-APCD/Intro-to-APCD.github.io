@@ -462,7 +462,7 @@ without this, they will hide the nave bar
         var playerCurrentlyPlaying = null;
         function chain(){       
             $('.post').each(function(){
-                var player_id = $(this).children('iframe').attr("id");
+                var player_id = $(this).children('lazyYT').attr("id");
                 player = new YT.Player( player_id, { 
                     events:
                         {      
