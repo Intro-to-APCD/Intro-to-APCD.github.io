@@ -1,7 +1,7 @@
-#Notes about the Project's Progress  
+##Notes about the Project's Progress  
   
-1. I created an ìadministrative simplificationî presentation by merging the risk adjustment and GIC topics  
-2. ìwhat is a provider?î topic gets merged into the provider overview presentation  
+1. I created an ‚Äúadministrative simplification‚Äù presentation by merging the risk adjustment and GIC topics  
+2. ‚Äúwhat is a provider?‚Äù topic gets merged into the provider overview presentation  
 3.  I was planning to do a data dictionary for the Massachusetts APCD.  But instead I'm going to link to every states data dictionary or submission guidelines.
 4.  I reorganized the webpage from using "APCD Terminology" and "Advanced topics"  to  "Insurance Industry Terminology" and "Claims Terminology"
 5.  I decided not to make an overview for the Dental data, because dental data is almost never used by researchers.
@@ -28,7 +28,7 @@
 3/11/16
 15.  I finally got the website to be completly mobile friendly!
 
-
+ 
 
 
 3/16/16
